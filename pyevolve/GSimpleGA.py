@@ -728,6 +728,13 @@ class GSimpleGA(object):
         stat_ret = self.internalPop.printStats()
         return message + stat_ret
 
+    def getTimeElapsed(self):
+        """Gets the time elapsed since the beginning of evolution
+
+        :rtype: a TimeDelta object
+        """
+        return time() - self.time_init
+
     def printTimeElapsed(self):
         """ Shows the time elapsed since the begin of evolution """
         total_time = time() - self.time_init
